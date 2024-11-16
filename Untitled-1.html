@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Dabre - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a4e69;
+            --secondary-color: #9a8c98;
+            --background-color: #f2e9e4;
+            --text-color: #22223b;
+            --accent-color: #c9ada7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .section {
+            background: white;
+            margin: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-section ul, .achievements-section ul {
+            padding-left: 1.5rem;
+        }
+
+        .skills-section ul li, .achievements-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-section ul li::before, .achievements-section ul li::before {
+            content: '•';
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+
+        .download-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--text-color);
+            color: var(--background-color);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sahil Dabre</h1>
+        <p>Football Player | Photographer | Musician</p>
+        <button class="download-btn" onclick="downloadResume()">Download Resume</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am Sahil Dabre, an all-rounder excelling in academics, sports, and music. 
+        With a passion for football, I have represented India internationally and led various teams in prestigious tournaments.</p>
+        <p>My other interests include music, photography, and creating meaningful connections as a digital influencer.</p>
+    </section>
+
+    <section id="achievements" class="section">
+        <h2>Key Achievements</h2>
+        <h3>Academics</h3>
+        <ul>
+            <li>85% in ICSE Board Exams</li>
+            <li>General Proficiency in multiple subjects</li>
+            <li>Recipient of numerous scholarships: Citizen Bank, Bombay Catholic Sabha</li>
+        </ul>
+        <h3>Sports</h3>
+        <ul>
+            <li>Represented India at four international football tournaments</li>
+            <li>Bronze medal at Upper Austria Cup, Europe</li>
+            <li>MSSA Football winner (2014, 2016, 2018)</li>
+            <li>Gold Medal in Long Jump, Silver in 100m, 200m</li>
+        </ul>
+        <h3>Music</h3>
+        <ul>
+            <li>Advanced violinist; performed at Tata Theatre, NCPA</li>
+            <li>Proficient in piano, guitar, and keyboard</li>
+            <li>Won multiple art competitions</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Professional Photography: Specializing in landscapes and portraits</li>
+            <li>Digital Influencing: Active on social media, creating engaging content</li>
+            <li>Video Editing and Graphic Design</li>
+            <li>Public Speaking and Leadership</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> <a href="mailto:sahildabre1@gmail.com">sahildabre1@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+917506962777">+91 75069 62xxx</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/Sahil-dabre" target="_blank">Sahil's LinkedIn</a></p>
+    </section>
+
+    <script>
+        function downloadResume() {
+            window.open('resume-link.pdf', '_blank');
+        }
+    </script>
+</body>
+</html>
